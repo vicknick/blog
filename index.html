@@ -1,97 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Dashboard</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <style>
-  	body
-  	{
-  		margin-top: 50px;
-  	}
-	.top-buffer 
-	 { 
-	 	margin-top:20px; 
-	 } 	
-	.box-bg
-	{
-		background-color: rgba(247,247,247,1);
-		border-radius: 10px 10px 10px 10px;
-		text-align: center;
-	}
-	.row1
-	{
-		padding: 20px;
-		font-size: 81px;
-		font-family: cambria;
-		color: green;
-	}
-	.row2
-	{
-		font-size: 20px;
-		font-family: cambria;
-		color: rgb(0,117,179);
-		font-weight: bold;
-	}
-	.text1
-	{
+---
+layout: default
+title: Blog Posts
+---
 
-	}
-  </style>
-<body>
+<div id="home">
 
-<div class="container">
-			<div class="row box-bg">
-					<div class="col-md-2">
-						<div class="row row1">
-							<img src="person.png" class="img-responsive" alt="Person Image">
-						</div>
-						<div class="row row2">
-							ID : 12345
-						</div>
-					</div>
-					<div class="col-md-1">
-					</div>
+  <h2 class="index-title"><i class="fa fa-send "> </i> Blog Posts</h2>
+  <div class="sidetop">Carefully written by<a href="https://abhinavgupta.in/" target="_blank"> Abhinav Gupta</a>
+    <br/>
 
-					<div class="col-md-2">
-						<div class="row row1">
-							26%
-						</div>
-						<div class="row row2">
-							DEFAULT PROBABILITY
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="row row1">
-							80
-						</div>
-						<div class="row row2">
-							RISK SCORE <br />[OUT OF 100]
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="row row1">
-							620
-						</div>
-						<div class="row row2">
-							CIBIL SCORE <br />[OUT OF 800]
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="row row1">
-							<img src="pie.png" class="img-responsive" alt="Pie Chart">
-						</div>
-						<div class="row row2">
-							CREDIT WORTHY APPLICANTS
-						</div>
-					</div>
-			</div>
-
+  </div>
+  <ul id="blog-posts" class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }} &raquo;</span><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 </div>
-</body>
-</html>
-
