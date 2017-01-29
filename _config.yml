@@ -1,6 +1,6 @@
 # General Jekyll Config
 highlighter: rouge
-url: https://vicknick.github.io/blog/
+url: https://vicknick.github.io/blog
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 image_path: assets/images
