@@ -7,6 +7,27 @@ html, body {
   height: 100%;
 }
 
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+ul.share-buttons li{
+  display: inline-block;;
+}
+
+ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 body {
   font-size: 16px;
   background-color: white;
@@ -78,7 +99,11 @@ ul.posts {
   margin-bottom: 10px;
   border-top: 4px solid #EEE;
 }
-
+#disqus_thread
+{
+  border-top: 4px solid #EEE;
+  margin-top: 25px;
+}
 ul.posts li {
   line-height: 22px;
   font-size: 16px;

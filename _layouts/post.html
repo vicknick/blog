@@ -14,6 +14,7 @@ layout: default
 <div id="post">
   {{ content }}
 </div>
+{% include sharing.html %}
 
 <div id="related">
   <h3>Related Posts</h3>
@@ -25,4 +26,5 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+
 {% include disqus.html %}
