@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Another sample
-comments: true
+comments: false
 categories:
 - blog
 ---
